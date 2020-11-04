@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function UsersContainer(props) {
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -16,10 +16,6 @@ function UsersContainer(props) {
 
   let mainContent
 
-  //on load
-  useEffect(() => {
-    initApp();
-  }, []);
 
 
   function initApp() {
@@ -34,6 +30,12 @@ function UsersContainer(props) {
         setLoading(true)
       })
   }
+
+  //on load
+  useEffect(() => {
+    initApp();
+  },);
+
 
 
   if (loading) {
