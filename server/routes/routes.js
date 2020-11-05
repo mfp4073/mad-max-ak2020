@@ -1,7 +1,14 @@
+
 var appRouter = function (app) {
-  app.get("/", function (req, res) {
-    res.status(200).send("Look, Stef, i hit my fucking express API 2!");
+  const db = require('./queries')
+
+  app.get("/", function (request, response) {
+    response.json({ info: 'Node.js, Express, and Postgres API' })
   });
+
+  app.get('/users', db.getUsers)
 }
 
 module.exports = appRouter;
+
+
