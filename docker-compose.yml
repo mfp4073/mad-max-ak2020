@@ -20,28 +20,15 @@ services:
             - "5000:5000"
         volumes:
             - ./server:/usr/src/app
-    # postgres:
-    #     image: postgres
-    #     restart: always
-    #     environment:
-    #         - DATABASE_HOST=127.0.0.1
-    #         - POSTGRES_USER=test
-    #         - POSTGRES_PASSWORD=test
-    #         - POSTGRES_DB=mad_max_ak2020
-
-    #     ports:
-    #         - "5432:5432"
-    #     volumes:
-    #         - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
-
-    # pgadmin-compose:
-    #     image: dpage/pgadmin4
-    #     environment:
-    #         PGADMIN_DEFAULT_EMAIL: "test@gmail.com"
-    #         PGADMIN_DEFAULT_PASSWORD: "test123!"
-    #     ports:
-    #         - "16543:80"
-    #     depends_on:
-    #         - postgres
+    storybook:
+        container_name: max_stories
+        build:
+            context: ./client
+            dockerfile: Dockerfile
+        image: akinney/max_stories
+        ports:
+            - "6006:6006"
+        volumes:
+            - ./client:/usr/src/app
 
 

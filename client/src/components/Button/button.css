@@ -1,0 +1,39 @@
+.fishman-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border-radius: 0;
+  font-size: 14px;
+  border: 0 solid transparent;
+  display: inline-block;
+  line-height: 1;
+  -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+    -webkit-box-shadow: none;
+}
+.fishman-button--primary {
+  color: white;
+  background-color: #f08c07;
+}
+.fishman-button--secondary {
+  color: white;
+  background-color: rgba(6,60,74,.7);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.fishman-button:hover {
+  background-color: #042932;
+  color: white;
+}
+.fishman-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.fishman-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.fishman-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
